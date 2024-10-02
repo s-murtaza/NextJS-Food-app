@@ -1,5 +1,9 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/main-header";
+import CartModal from "@/components/cart";
+import CheckoutModal from "@/components/checkout";
+import SuccessModal from "@/components/success";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,6 +27,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <CartModal />
+        <CheckoutModal />
+        <SuccessModal/>
+        <Header />
         {children}
       </body>
     </html>
